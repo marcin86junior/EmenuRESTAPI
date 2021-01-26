@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Marcin Nowak">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Django apps gallery - Marcin Nowak</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/favicon.ico">
+
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="marcin86.pythonanywhere.com/" class="navbar-brand d-flex align-items-center">
+        <strong>Django apps gallery - Marcin Nowak</strong>
+      </a>
+    </div>
+  </div>
+
+<body>
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Witmy serdecznie na eMenuRestApi! &#128214;</h1>
+      <p></p>
+      <img  src="https://mobirise.com/extensions/shopamp/assets/images/brooke-lark-158017-unsplash-2-2000x1497.jpg" alt="Girl in a jacket" style="width:30%;height:30%;"> 
+      <br><P></P>
+        API Publiczne:<p>
+        <a href="/lista/" class="btn btn-success my-2">Menu z daniam (wszystkie)</a>
+        <a href="/api/Card/" class="btn btn-success my-2">Menu posiadające przepisy REST</a>
+        <a href="/api/Dish/" class="btn btn-success my-2">Pokaż wszystkie dania REST</a>
+        <p>
+        API Niepubliczne (dla zarejestrowanych):<p></p>
+        {% if user.is_authenticated %}
+        {% else %}
+        <a href="/admin/" class="btn btn-warning">Zaloguj się / zarejestruj się</a>
+        {% endif %}
+        {% if user.is_authenticated %}
+        <a href="/api/CardItemsAuth/" class="btn btn-primary my-2">Dodaj/edytuj "menu"</a>
+        <a href="/api/DishAuth/" class="btn btn-primary my-2">Dodaj/edytuj "przepisy"</a>
+        
+        <a href="/api/CardItems/" class="btn btn-info my-2">Dodaj "przepis" do "menu"</a>
+        <a href="/admin/" class="btn btn-secondary">Wyloguj</a>
+        {% endif %}
+    </div>
+  </section>
+</body>
+
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,8 @@
+Przyda się w przyszłości:
+
+python manage.py dumpdata eMenu --indent 4 > eMenu\fixtures\data.json
+
+w plik json - w notatniku zapisz jako UTF 8 
+https://stackoverflow.com/questions/17843630/python-can-dumpdata-cannot-loaddata-back-unicodedecodeerror
+
+python  manage.py loaddata eMenu\fixtures\data.json --app eMenu

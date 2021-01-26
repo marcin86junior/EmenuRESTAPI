@@ -1,0 +1,6 @@
+#emenu
+#REQUIREMENTS:
+Django==3.0.7
+djangorestframework==3.11.0
+django-filter==2.3.0
+Pillow==8.1.0

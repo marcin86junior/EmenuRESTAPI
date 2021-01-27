@@ -1,4 +1,4 @@
-﻿emenuREST_app
+EmenuRESTAPI 
 ===========
 
 Wymagania:
@@ -35,8 +35,7 @@ Pokrycie testów:
 
 	.....................
 
-
-emenu_app (stare nie aktualne)
+EmenuRESTAPI (informacje)
 ===========
 
 API publiczne:

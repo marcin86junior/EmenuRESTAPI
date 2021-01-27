@@ -46,6 +46,7 @@ Api niepubliczne:
 	...
 
 Fixtures:
+
 	-Polskie jedzenie powiązane z Kotlet schabowy,
 	-Tajladzkie jedzenie powiązane z Tikimarsala,
 	-Menu puste bez powiązania z żadnym daniem
@@ -61,5 +62,6 @@ Wymagane poprawki (ważne):
 	->Swagger
 
 Małe poprawki:
+
 	->logowanie - przestawić na głowną stronę w settings
 	->małe obraki do potraw 

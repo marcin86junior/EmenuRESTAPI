@@ -1,4 +1,6 @@
 #EmenuRESTAPI 
+#pip freeze > requirements.txt
+
 #REQUIREMENTS
 Django==3.1
 djangorestframework==3.11.0

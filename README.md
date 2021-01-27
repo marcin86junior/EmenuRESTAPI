@@ -7,7 +7,6 @@ Wymagania:
 
 Instalacja:
 
-	nagraj pythona 3.8.x
 	git clone https://github.com/marcin86junior/EmenuRESTAPI .
 	python -m venv myvenv
 	cd .\myvenv\Scripts\

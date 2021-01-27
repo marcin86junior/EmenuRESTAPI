@@ -18,7 +18,7 @@ Instalacja:
 	wyłacz w urls.py (w myproject\myproject):      #path('', include('eMenu.urls')),
 	cd myproject\
 	python manage.py migrate
-	python manage.py createsuperuser   np.xxx / hasło: 123
+	python manage.py createsuperuser
 	włacz w urls.py (w myproject\myproject):      path('', include('eMenu.urls')),
 	python manage.py runserver
 

@@ -7,6 +7,7 @@ Wymagania:
 
 Instalacja:
 
+	utwórz nowy katalog "PythonRestEmenu" i wejdz do niego
 	git clone https://github.com/marcin86junior/EmenuRESTAPI .
 	python -m venv myvenv
 	.\myvenv\Scripts\activate
@@ -60,5 +61,5 @@ Wymagane poprawki (ważne):
 ->Swagger
 
 Małe poprawki:
-->logowanie (wyrzuca na główną stronę) - w settings
-->małe obraki do potraw
+->logowanie - przestawić na głowną stronę w settings
+->małe obraki do potraw 

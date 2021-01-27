@@ -12,6 +12,8 @@ Instalacja:
 	python -m venv myvenv
 	.\myvenv\Scripts\activate
 	pip install -r requirements.txt
+	pip install --upgrade pip 
+	pip install django-rest-swagger
 	wyłacz w urls.py (w myproject\myproject):      #path('', include('eMenu.urls')),
 	cd myproject\
 	python manage.py migrate

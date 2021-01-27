@@ -1,6 +1,8 @@
-#emenu
-#REQUIREMENTS:
-Django==3.0.7
+#EmenuRESTAPI 
+#REQUIREMENTS
+Django==3.1
 djangorestframework==3.11.0
 django-filter==2.3.0
 Pillow==8.1.0
+pip
+django-rest-swagger==2.2.0

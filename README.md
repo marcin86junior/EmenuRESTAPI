@@ -1,6 +1,8 @@
 EmenuRESTAPI 
 ===========
 
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
 Wymagania:
 
     Python 3.8.x

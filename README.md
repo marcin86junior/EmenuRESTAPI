@@ -9,18 +9,17 @@ Instalacja:
 
 	git clone https://github.com/marcin86junior/EmenuRESTAPI .
 	python -m venv myvenv
-	cd .\myvenv\Scripts\
-	.\activate
+	.\myvenv\Scripts\activate
 	cd..
 	cd..
 	pip install -r requirements.txt
 	pip install --upgrade pip 
 	pip install django-rest-swagger
-	wyłacz w urls.py (w myproject):      #path('', include('eMenu.urls')),
+	wyłacz w urls.py (w myproject\myproject):      #path('', include('eMenu.urls')),
 	cd myproject\
 	python manage.py migrate
-	python manage.py createsuperuser   np.Marcin / hasło: 123
-	włacz w urls.py (w myproject):      path('', include('eMenu.urls')),
+	python manage.py createsuperuser   np.xxx / hasło: 123
+	włacz w urls.py (w myproject\myproject):      path('', include('eMenu.urls')),
 	python manage.py runserver
 
 Dodawanie fixturek:

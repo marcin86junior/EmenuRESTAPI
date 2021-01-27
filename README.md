@@ -40,9 +40,11 @@ emenu_app (stare nie aktualne)
 ===========
 
 API publiczne:
+
 	...
 
 Api niepubliczne:
+
 	...
 
 Fixtures:

@@ -1,7 +1,7 @@
 EmenuRESTAPI 
 ===========
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/marcin86junior/EmenuRESTAPI/blob/main/obrazek.PNG?raw=true)
 
 Wymagania:
 

@@ -40,20 +40,26 @@ emenu_app (stare nie aktualne)
 ===========
 
 API publiczne:
--> Wyświetlanie kart menu tylko z przepisami działa połowicznie dobrze. Po zmianie powiązań class CardItems) wymaga zrestartowania serwera. Wiem, że jest coś takiego jak serializers.update i save - ale nie wiem jak tego używać.
+...
 
 Api niepubliczne:
--> Po zalogoawniu na głównej stronie są udostępniane przyciski do dodawania i edcji: Menu / Dań / Powiązań.
--> Jest możliowść filtroawia wg dowolnego parametru.
+...
 
 Fixtures:
 -Polskie jedzenie powiązane z Kotlet schabowy,
 -Tajladzkie jedzenie powiązane z Tikimarsala,
 -Menu puste bez powiązania z żadnym daniem
--Danie "Zupa ogórkowa" nie przypisane do żadnego menu.
+-Danie "Zupa ogórkowa" nie przypisane do żadnego menu*** (nie dodane)
 
-->Raportowanie nie działa (nie umiem Celery)
-->Proste 2 testy (umiem tylko postawy)
-->Dodawianie obraków do /static działa ale nie skonfigrowałem URLs do wyświetlania
-->PostgreSQL - można zmienić linjek w settings.py
-->Docker mam nagrany ale jeszcze za bardzo nie umiem
+Wymagane poprawki (ważne):
+
+->dodać raportowanie / Celery+Redis (Heroku)
+->dodać testy
+->dodać pokrycie testów
+->PostgreSQL (sprawdzić czy działa)
+->Docker
+->Swagger
+
+Małe poprawki:
+->logowanie (wyrzuca na główną stronę) - w settings
+->małe obraki do potraw

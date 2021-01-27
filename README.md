@@ -40,26 +40,26 @@ emenu_app (stare nie aktualne)
 ===========
 
 API publiczne:
-...
+	...
 
 Api niepubliczne:
-...
+	...
 
 Fixtures:
--Polskie jedzenie powiązane z Kotlet schabowy,
--Tajladzkie jedzenie powiązane z Tikimarsala,
--Menu puste bez powiązania z żadnym daniem
--Danie "Zupa ogórkowa" nie przypisane do żadnego menu*** (nie dodane)
+	-Polskie jedzenie powiązane z Kotlet schabowy,
+	-Tajladzkie jedzenie powiązane z Tikimarsala,
+	-Menu puste bez powiązania z żadnym daniem
+	-Danie "Zupa ogórkowa" nie przypisane do żadnego menu*** (nie dodane)
 
 Wymagane poprawki (ważne):
 
-->dodać raportowanie / Celery+Redis (Heroku)
-->dodać testy
-->dodać pokrycie testów
-->PostgreSQL (sprawdzić czy działa)
-->Docker
-->Swagger
+	->dodać raportowanie / Celery+Redis (Heroku)
+	->dodać testy
+	->dodać pokrycie testów
+	->PostgreSQL (sprawdzić czy działa)
+	->Docker
+	->Swagger
 
 Małe poprawki:
-->logowanie - przestawić na głowną stronę w settings
-->małe obraki do potraw 
+	->logowanie - przestawić na głowną stronę w settings
+	->małe obraki do potraw 

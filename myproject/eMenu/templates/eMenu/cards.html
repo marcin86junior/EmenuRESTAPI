@@ -4,38 +4,24 @@
 <center><h1><b>	&#9733; Lista dostępnych kart Menu&#9733;</b></center></h1>
 <p>
 <center> 
-
 {% for card in cards %}
 	<h1 style="background-color:9EB9D4;">>> {{ card.name }} <<</h1>
 	<h3 style="background-color:powderblue;"> 
 	Opis: {{ card.description }} <br><p></h1>
 	Data dodania: {{ card.add_time|date:"M d, Y" }} / Data modyfikacji: {{ card.update_time|date:"M d, Y" }}<p>
-
 	<b>Dania:</b><p></h1>
-
 	{% for item in cardsitems %} 
 		{% if item.card.name in card.name %}
-			
-			{{ item.dish }}
-<!-- Do poprawienia (description) - obrazki działają
-			<br>--------------------------------------
-			{% for dishx in dishdata %} 
-				{% if item.dish in dishx.name %}
-					OK{{ dishx.description }} / {{ dishx.price }}
-				{% endif %}
-				<br>
-				----------------------------<br>
-				3{{ dishx.name }}<br>
-				4{{ dishx.description }}<br>
-				5{{ dishx.price }}<br>
-
- 				<a href="/media/{{dishx.image}}" class="d-block mb-4 h-100"> OBRAZEK
-          			<img class="img-fluid img-thumbnail" src="{{dishx.results.image.url}}" alt=""></a>
-
-			{% endfor %}	
--->		
+			{{ item.dish }} - {{ item.dish.description }}<br>
+			Wegetariańskie: 
+			{% if item.dish.wege == True %} Tak {% endif %}
+			{% if item.dish.wege == False %} Nie {% endif %}<br>
+		    Cena: {{ item.dish.price }} zł<br><p></p>
+			<a href="/media/{{item.dish.image}}" class="d-block mb-4 h-100"> 
+          	<img class="img-fluid img-thumbnail" src="/media/{{item.dish.image}}" width="200" height="200"></a>
+			<br>
+			<br>
 		{% endif %}
 	{% endfor %}
-
 {% endfor %}
 </center>

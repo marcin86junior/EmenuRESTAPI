@@ -1,11 +1,12 @@
 EmenuRESTAPI 
 ===========
 
-![alt text](https://github.com/marcin86junior/EmenuRESTAPI/blob/main/obrazek.PNG?raw=true)
+![alt text](https://github.com/marcin86junior/EmenuRESTAPI/blob/main/readme.PNG?raw=true)
 
 Wymagania:
 
-    Python 3.8.x
+	Python 3.8.x
+	Django 3.0.7
 
 Instalacja:
 
@@ -21,48 +22,17 @@ Instalacja:
 	python manage.py migrate
 	python manage.py createsuperuser
 	włacz w urls.py (w myproject\myproject):      path('', include('eMenu.urls')),
-	python manage.py runserver
-
-Dodawanie fixturek:
-
 	python  manage.py loaddata eMenu\fixtures\data.json --app eMenu
+	python manage.py runserver 
 
-Testy:
-	
-	.....................
+Testowanie:
 
-Pokrycie testów:
+	python manage.py test emnenu
+	coverage run --source='.' manage.py test eMenu
+	coverage raport -m
 
-	.....................
-
-EmenuRESTAPI (informacje)
-===========
-
-API publiczne:
-
-	...
-
-Api niepubliczne:
-
-	...
-
-Fixtures:
-
-	-Polskie jedzenie powiązane z Kotlet schabowy,
-	-Tajladzkie jedzenie powiązane z Tikimarsala,
-	-Menu puste bez powiązania z żadnym daniem
-	-Danie "Zupa ogórkowa" nie przypisane do żadnego menu*** (nie dodane)
-
-Wymagane poprawki (ważne):
+Wymagane poprawki:
 
 	->dodać raportowanie / Celery+Redis (Heroku)
-	->dodać testy
-	->dodać pokrycie testów
 	->PostgreSQL (sprawdzić czy działa)
-	->Docker
-	->Swagger
-
-Małe poprawki:
-
-	->logowanie - przestawić na głowną stronę w settings
-	->małe obraki do potraw 
+	->Docker (sprawdzić)

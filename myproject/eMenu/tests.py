@@ -1,15 +1,36 @@
 from django.test import TestCase
 from .models import Card, Dish, CardItems
+from .views import CardView
+from django.test import RequestFactory
 
 # Create your tests here.
 
 # models.py
-class Card_Dish_and_CardItems_ModelTestCase(TestCase):
+class CardModelTestCase(TestCase):
     fixtures = ['data.json']
-
     def setUp(self):
         Card.objects.create(name="Testowa karta", description="Karta utworzona do testow")
-        Dish.objects.create(name="Danie testowe", description="Danie utowrzone do testów", price='15')
+        Dish.objects.create(name="Danie testowe", description="Danie utowrzone do testów", price='15', preparation_time='15')
         card = Card.objects.get(name="Testowa karta")
         dish = Dish.objects.get(name="Danie testowe")
-        CardItems.objects.create(card_id = card.id, dish_id = dish.id)
+        CardItems.objects.create(card_id = dish.id, dish_id = dish.id)
+    def test_card_query(self):
+        card = Card.objects.get(name="Testowa karta")
+        self.assertEqual(card.description, 'Karta utworzona do testow')
+
+# views.py
+class CardListTestCase(TestCase):
+    def test_get(self):
+        request = RequestFactory().get('/lista/')
+        view = CardView.as_view()
+        response = view(request)
+        #print(response)
+        self.assertEqual(response.status_code, 200)
+    def test_bad_link(self):
+        resp = self.client.get('/abcdefghijklmnoprstuwyz')
+        self.assertEqual(resp.status_code, 404)
+    def test_bad_pk(self):
+        resp = self.client.get('api/Card/dsadsada')
+        self.assertEqual(resp.status_code, 404)
+
+

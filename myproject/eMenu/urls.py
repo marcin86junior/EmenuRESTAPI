@@ -19,6 +19,6 @@ urlpatterns = [
     path('', views.homepage),
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('lista/', views.ExampleView.as_view()),
+    path('lista/', views.CardView.as_view()),
     path('schema/', schema_view)
 ]

@@ -26,11 +26,14 @@ Instalacja:
 Testowanie:
 
 	python manage.py test emnenu
-	coverage run --source='.' manage.py test eMenu
-	coverage raport -m
+	coverage run --source='.' --omit='*migrations*,*init*,*wsgi*,*asgi*,*urls*,*manage*,*admin*,*apps*,*settings*,*test*,*seriali*' manage.py test eMenu
+	coverage html
 
 Wymagane poprawki:
 
+	->data aktualizacji 
+	->skrypt "menu nie puste" przenieść z class'y
+	->napisać pozostałe testy
 	->dodać raportowanie / Celery+Redis (Heroku)
-	->PostgreSQL (sprawdzić czy działa)
 	->Docker (sprawdzić)
+

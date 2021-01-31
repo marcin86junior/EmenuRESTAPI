@@ -14,7 +14,6 @@
 		{% if item.card.name in card.name %}
 			{{ item.dish }} - {{ item.dish.description }}<br>
 			Wegetariańskie: 
-			{% if item.dish.wege == True %} Tak {% endif %}
 			{% if item.dish.wege == False %} Nie {% endif %}<br>
 		    Cena: {{ item.dish.price }} zł<br><p></p>
 			<a href="/media/{{item.dish.image}}" class="d-block mb-4 h-100"> 

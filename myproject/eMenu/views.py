@@ -100,7 +100,7 @@ class CardItemsList(viewsets.ModelViewSet):
     authentication_classes = [SessionAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
-class ExampleView(APIView):
+class CardView(APIView):
     authentication_classes = [BasicAuthentication]
     permission_classes = [permissions.AllowAny]
     renderer_classes = [TemplateHTMLRenderer]

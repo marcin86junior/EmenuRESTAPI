@@ -39,3 +39,6 @@ Do poprawienia:
 	Drobne poprawki:
 	- data auktualizacji
 	- brakujące testy
+	
+	Naprawione (teraz PN 12:30):
+	-poprawić/przenieść skrypt "menu tylko z przepisami" - błąd eMenu_carditems

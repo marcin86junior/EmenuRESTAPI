@@ -23,7 +23,7 @@ Instalacja:
 
 Testowanie:
 
-	python manage.py test emnenu
+	python manage.py test eMenu
 	coverage run --source='.' --omit='*migrations*,*init*,*wsgi*,*asgi*,*urls*,*manage*,*admin*,*apps*,*settings*,*test*,*seriali*' manage.py test eMenu
 	coverage html
 	

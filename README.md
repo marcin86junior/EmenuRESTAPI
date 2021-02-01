@@ -28,3 +28,14 @@ Testowanie:
 	python manage.py test emnenu
 	coverage run --source='.' --omit='*migrations*,*init*,*wsgi*,*asgi*,*urls*,*manage*,*admin*,*apps*,*settings*,*test*,*seriali*' manage.py test eMenu
 	coverage html
+	
+
+Do poprawienia:
+
+	Ważne:
+	-docker-compose (command)
+	Nowe:	
+	- raportowanie (celery+redis) albo prosty widok z wysyłaniem listów
+	Drobne poprawki:
+	- data auktualizacji
+	- brakujące testy

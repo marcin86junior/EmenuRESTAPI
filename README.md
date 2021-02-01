@@ -15,11 +15,9 @@ Instalacja:
 	python -m venv myvenv
 	.\myvenv\Scripts\activate
 	pip install -r requirements.txt
-	wyłacz w urls.py (w myproject\myproject):      #path('', include('eMenu.urls')),
 	cd myproject\
 	python manage.py migrate
 	python manage.py createsuperuser
-	włacz w urls.py (w myproject\myproject):      path('', include('eMenu.urls')),
 	python  manage.py loaddata eMenu\fixtures\data.json --app eMenu
 	python manage.py runserver 
 

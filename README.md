@@ -31,5 +31,4 @@ Do poprawienia:
 
 	- docker-compose (command)
 	- raportowanie (celery+redis) albo prosty widok z wysyłaniem listów
-	- data aktualizacji (15min drobna poprawka)
-	- brakujące testy (1h-2h drobna poprawka)
+	- brakujące testy (views 50%)

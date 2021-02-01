@@ -32,11 +32,11 @@ Do poprawienia:
 
 	Ważne:
 	-docker-compose (command)
-	Nowe:	
-	- raportowanie (celery+redis) albo prosty widok z wysyłaniem listów
 	Drobne poprawki:
 	- data auktualizacji
 	- brakujące testy
+	Nowe:	
+	- raportowanie (celery+redis) albo prosty widok z wysyłaniem listów
 	
 	Naprawione (teraz PN 12:30):
-	-poprawić/przenieść skrypt "menu tylko z przepisami" - błąd eMenu_carditems
+	-poprawić/przenieść skrypt "menu tylko z przepisami" - błąd eMenu_carditems + readme (nie wymaga wyłączanie urls aplikacji eMenu przed migracją)

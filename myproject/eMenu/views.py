@@ -21,7 +21,7 @@ def homepage(request):
 
 class DishListPublic(viewsets.ModelViewSet):
     """
-    API endpoint that allows books to be viewed / edited or filtered.
+    API endpoint that allows "Dish" to be viewed in public.
     """
     queryset = Dish.objects.all()
     serializer_class = EmenuSerializer
@@ -35,7 +35,7 @@ class DishListPublic(viewsets.ModelViewSet):
 
 class DishListAuth(viewsets.ModelViewSet):
     """
-    API endpoint that allows books to be viewed / edited or filtered.
+    API endpoint that allows "Dish" to be viewed after authorization / edited or filtered.
     """
     queryset = Dish.objects.all()
     serializer_class = EmenuSerializer
@@ -45,37 +45,9 @@ class DishListAuth(viewsets.ModelViewSet):
     
 class CardListPublic(viewsets.ModelViewSet):
     """
-    API endpoint that allows books to be viewed / edited or filtered.
+    API endpoint that allows "Cards" to be viewed in public.
     """
-    #script create list of all menu with "dish/es" from conection model CardItems and delete replicated elemnets
-
-    powiazania = CardItems.objects.all()
-    #print(list(powiazania))
-    listx=list(powiazania)
-    j=0
-    for i in listx:
-        listx[j]=str(listx[j])
-        j+=1
-    res = [] 
-    for i in listx: 
-        if i not in res: 
-            res.append(i) 
-    #print(str(res)+str(' how many: ')+str(len(res)))
-
-    #script is adding do queryset objects "all menu with dishes"
-    if len(res)>=0:
-        y=Card.objects.none()
-        j=0
-        for i in res:
-            x = Card.objects.filter(name=res[j])
-            y = y | x
-            j+=1
-        queryset = y  
-    #    print(queryset)
-    else:
-        queryset = Card.objects.none()
-
-    #typical script
+    queryset = Card.objects.all()
     serializer_class = EmenuSerializer2
     filter_backends = (filters.DjangoFilterBackend, SearchFilter, OrderingFilter)
     authentication_classes = [BasicAuthentication]
@@ -83,7 +55,7 @@ class CardListPublic(viewsets.ModelViewSet):
 
 class CardListAuth(viewsets.ModelViewSet):
     """
-    API endpoint that allows books to be viewed / edited or filtered.
+    API endpoint that allows "Cards" to be viewed after authorization / edited or filtered.
     """
     queryset = Card.objects.all()
     serializer_class = EmenuSerializer2
@@ -93,7 +65,7 @@ class CardListAuth(viewsets.ModelViewSet):
 
 class CardItemsList(viewsets.ModelViewSet):
     """
-    API endpoint that allows books to be viewed / edited or filtered.
+    API endpoint that allows to connect "Dish" to "Cards" after authorization / edited or filtered.
     """
     queryset = CardItems.objects.all()
     serializer_class = EmenuSerializer3
@@ -106,7 +78,35 @@ class CardView(APIView):
     renderer_classes = [TemplateHTMLRenderer]
 
     def get(self, request):
-        queryset = Card.objects.all()
+
+        #script create list of all menu with "dish/es" from conection model CardItems and delete replicated elemnets
+        powiazania = CardItems.objects.all()
+        #print(list(powiazania))
+        listx=list(powiazania)
+        j=0
+        for i in listx:
+            listx[j]=str(listx[j])
+            j+=1
+        res = [] 
+        for i in listx: 
+            if i not in res: 
+                res.append(i) 
+        #print(str(res)+str(' how many: ')+str(len(res)))
+
+        #script is adding do queryset objects "all menu with dishes"
+        if len(res)>=0:
+            y=Card.objects.none()
+            j=0
+            for i in res:
+                x = Card.objects.filter(name=res[j])
+                y = y | x
+                j+=1
+            queryset = y  
+        #    print(queryset)
+        else:
+            queryset = Card.objects.none()
+
+        #queryset = Card.objects.all()  - dla wszystkich menu
         queryset2 = CardItems.objects.all()
         queryset3 = Dish.objects.all()
         template_name = 'eMenu/cards.html'

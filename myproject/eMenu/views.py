@@ -30,7 +30,8 @@ class DishListPublic(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get(self):
-        queryset = Dish.objects.all().name('id')
+        queryset = Dish.objects.all()
+        #queryset = Dish.objects.all().name('id')
         return queryset
 
 class DishListAuth(viewsets.ModelViewSet):

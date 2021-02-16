@@ -26,7 +26,14 @@ Testowanie:
 	python manage.py test eMenu
 	coverage run --source='.' --omit='*migrations*,*init*,*wsgi*,*asgi*,*urls*,*manage*,*admin*,*apps*,*settings*,*test*,*seriali*' manage.py test eMenu
 	coverage html
-	
+
+Docker:
+
+	utwórz nowy katalog "PythonRestEmenu" i wejdz do niego
+	git clone https://github.com/marcin86junior/EmenuRESTAPI .
+	cd myprojects
+	docker-compose up
+
 Do poprawienia:
 
 	- docker-compose (command)

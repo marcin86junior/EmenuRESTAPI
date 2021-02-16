@@ -33,8 +33,3 @@ Docker:
 	git clone https://github.com/marcin86junior/EmenuRESTAPI .
 	cd myproject
 	docker-compose up
-
-Do poprawienia:
-
-	- raportowanie (celery+redis) albo prosty widok z wysyłaniem listów
-	- brakujące testy (views 50%)

@@ -36,6 +36,5 @@ Docker:
 
 Do poprawienia:
 
-	- docker-compose (command)
 	- raportowanie (celery+redis) albo prosty widok z wysyłaniem listów
 	- brakujące testy (views 50%)

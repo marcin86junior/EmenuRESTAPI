@@ -31,7 +31,7 @@ Docker:
 
 	utwórz nowy katalog "PythonRestEmenu" i wejdz do niego
 	git clone https://github.com/marcin86junior/EmenuRESTAPI .
-	cd myprojects
+	cd myproject
 	docker-compose up
 
 Do poprawienia:

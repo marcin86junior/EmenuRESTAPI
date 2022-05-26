@@ -32,4 +32,5 @@ Docker:
 	utwórz nowy katalog "PythonRestEmenu" i wejdz do niego
 	git clone https://github.com/marcin86junior/EmenuRESTAPI .
 	cd myproject
+	docker-compose run web python3 manage.py migrate
 	docker-compose up

@@ -33,4 +33,5 @@ Docker:
 	git clone https://github.com/marcin86junior/EmenuRESTAPI .
 	cd myproject
 	docker-compose run web python3 manage.py migrate
+	docker-compose run web python3 manage.py loaddata data.json --app eMenu
 	docker-compose up
